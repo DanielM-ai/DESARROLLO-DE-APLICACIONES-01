@@ -1,0 +1,19 @@
+h1 {
+  color: (240,100%,50%); 
+
+}
+
+.parrafo1 {
+  color:hsl(271,76%,53%) 
+}
+
+.parrafo2 {
+  background-color: hsl(39,100%,50%); 
+}
+
+.boton {
+  background-color: hsl(197,71%,73%) ; 
+  color: rgb(100%,50%,31%);
+  padding: 10px;
+  border: none;
+}
