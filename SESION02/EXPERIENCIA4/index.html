@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Turismo Perú – Página Accesible</title>
+  <link rel="stylesheet" href="turismo.css"/>
+</head>
+<body>
+  <header>
+    <h1>Turismo Perú</h1>
+    <nav>
+      <ul>
+        <li><a href="#destinos">Destinos</a></li>
+        <li><a href="#consejos">Consejos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+     <aside aria-label="Tips de viaje">
+    <h2>Tips rápidos</h2>
+    <ul>
+      <li>Lleva bloqueador solar siempre.</li>
+      <li>Mejor época: mayo a septiembre.</li>
+      <li>Respeta la cultura local y sus costumbres.</li>
+    </ul>
+  </aside>
+  
+    <section id="destinos" aria-labelledby="titulo-destinos">
+      <h2 id="titulo-destinos">Destinos destacados</h2>
+
+      <article>
+        <h3>Arequipa</h3>
+        <figure>
+          <img src="arequipa.jpeg" alt="Vista del volcán Misti detrás de la ciudad de Arequipa" width="360" height="220"/>
+          <figcaption>Ciudad Blanca y Valle del Colca</figcaption>
+        </figure>
+        <p>Arquitectura en sillar, gastronomía única y paisajes volcánicos. Ideal para turismo cultural y aventura.</p>
+        <p>
+          <a class="boton" href="#contacto">Quiero saber más</a>
+        </p>
+      </article>
+
+      <article>
+        <h3>Cusco</h3>
+        <figure>
+          <img src="cusco.jpeg" alt="Plaza de Armas de Cusco al atardecer" width="360" height="220"/>
+          <figcaption>Capital del Tahuantinsuyo</figcaption>
+        </figure>
+        <p>Historia viva, centros arqueológicos y el acceso al Camino Inca y Machu Picchu.</p>
+        <p>
+          <a class="boton" href="#contacto">Quiero saber más</a>
+        </p>
+      </article>
+
+      <article>
+        <h3>Puno</h3>
+        <figure>
+          <img src="puno.jpeg" alt="Islas flotantes de los Uros en el lago Titicaca" width="360" height="220"/>
+          <figcaption>Lago Titicaca y cultura viva</figcaption>
+        </figure>
+        <p>Navega por el lago navegable más alto del mundo y conoce las islas de los Uros y Taquile.</p>
+        <p>
+          <a class="boton" href="#contacto">Quiero saber más</a>
+        </p>
+      </article>
+    </section>
+
+    <section id="consejos" aria-labelledby="titulo-consejos">
+      <h2 id="titulo-consejos">Consejos de viaje</h2>
+      <ul>
+        <li>Usa protector solar y mantente hidratado.</li>
+        <li>Para altura, aclimátate y descansa el primer día.</li>
+        <li>Respeta las normas de las áreas naturales protegidas.</li>
+      </ul>
+    </section>
+
+    <section id="contacto" aria-labelledby="titulo-contacto">
+      <h2 id="titulo-contacto">Contacto</h2>
+      <p>Escríbenos para armar tu itinerario accesible y a tu medida.</p>
+      <p><a class="boton" href="#">Solicitar información</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Turismo Perú</p>
+  </footer>
+</body>
+</html>
