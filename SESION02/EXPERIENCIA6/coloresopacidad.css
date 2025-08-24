@@ -1,0 +1,18 @@
+h1 {
+  color: hsla(240, 100%, 50%, 0.7); /* Azul con 70% de opacidad */
+}
+
+.parrafo1 {
+  color: hsla(271, 76%, 53%, 0.6); /* Violeta con 60% de opacidad */
+}
+
+.parrafo2 {
+  background-color: hsla(39, 100%, 50%, 0.5); /* Naranja con 50% de opacidad */
+}
+
+.boton {
+  background-color: hsla(197, 71%, 73%, 0.4); /* Celeste con 40% de opacidad */
+  color: rgba(255, 127, 80, 0.9); /* Coral con 90% de opacidad */
+  padding: 10px;
+  border: none;
+}
