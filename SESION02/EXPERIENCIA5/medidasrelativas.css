@@ -1,0 +1,60 @@
+html {
+  font-size: 16px; /* Base para rem */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.caja {
+  margin: 10px auto;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+/* Ejemplos de medidas relativas */
+
+/* em → relativo al tamaño de fuente del padre */
+.caja1 {
+  width: 20em;   
+  height: 5em;
+  font-size: 1.5em; 
+  background-color: lightblue;
+}
+
+/* rem → relativo al tamaño base del root (html) */
+.caja2 {
+  width: 30rem; 
+  height: 10rem;
+  background-color: lightgreen;
+}
+
+/* Porcentaje → relativo al contenedor */
+.caja3 {
+  width: 80%;
+  height: 30%;
+  background-color: lightcoral;
+}
+
+/* vw y vh → relativo al tamaño de la ventana */
+.caja4 {
+  width: 50vw; 
+  height: 20vh; 
+  background-color: lightgoldenrodyellow;
+}
+
+/* ch → ancho de un "0" */
+.caja5 {
+  width: 40ch; 
+  height: 10ch;
+  background-color: lightpink;
+}
+
+/* lh → relativo a la altura de la línea */
+.caja6 {
+  line-height: 2;
+  width: 20lh;
+  height: 10lh;
+  background-color: lightskyblue;
+}
