@@ -1,0 +1,19 @@
+h1 {
+  color: rgb(10, 10, 255); 
+
+}
+
+.parrafo1 {
+  color:rgb(101, 101, 141)
+}
+
+.parrafo2 {
+  background-color: rgb(100, 100, 0); 
+}
+
+.boton {
+  background-color: rgb(100%, 0, 0); 
+  color: rgb(100%,50%,31%);
+  padding: 10px;
+  border: none;
+}
