@@ -1,0 +1,187 @@
+/* ------------------ BASE ------------------ */
+html { font-size: 16px; }
+body {
+  font-family: Arial, sans-serif;
+  color: #111;
+  background-color: #f5f7fb;
+  line-height: 1.65;
+  margin: 0;
+}
+header, main, footer { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+/* ------------------ HEADER / NAV ------------------ */
+header {
+  background-color: #fff;
+  border-bottom: 1px solid hsl(210, 24%, 90%);
+  text-align: center;
+  padding: 20px 20px 14px;
+}
+header h1 { margin: 0 0 8px; color: hsl(230, 60%, 22%); }
+
+nav ul {
+  list-style: none;
+  margin: 0; padding: 0;
+  display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;
+}
+/* Selector avanzado por atributo: solo enlaces internos */
+nav a[href^="#"] {
+  text-decoration: none;
+  font-weight: bold;
+  color: hsl(230, 70%, 30%);
+  background-color: hsl(210, 100%, 97%);
+  padding: 8px 12px;
+  border-radius: 999px;
+  transition: background-color .25s, color .25s, transform .2s;
+}
+nav a[href^="#"]:hover {
+  background-color: hsl(230, 70%, 30%);
+  color: #fff;
+  transform: translateY(-1px);
+}
+nav a[href^="#"]:focus {
+  outline: 3px solid hsl(39, 100%, 50%);
+  outline-offset: 2px;
+}
+
+/* ------------------ LAYOUT: ASIDE IZQUIERDA + CONTENIDO ------------------ */
+main {
+  display: grid;
+  grid-template-columns: 260px 1fr;     /* aside + contenido */
+  gap: 24px;
+  padding: 24px 20px 28px;
+  align-items: start;
+}
+
+/* ------------------ ASIDE (limpio y útil) ------------------ */
+aside {
+  background-color: hsla(210, 100%, 97%, 0.9);
+  border: 1px solid hsl(210, 30%, 88%);
+  border-radius: 12px;
+  padding: 16px 14px;
+}
+aside h2 {
+  margin: 0 0 10px;
+  color: hsl(230, 60%, 22%);
+  font-size: 1.1rem;
+  position: relative;
+}
+aside h2::before {
+  content: "📌 ";
+}
+aside ul { list-style: none; margin: 0; padding: 0; }
+aside li {
+  padding: 6px 0 6px 24px;
+  position: relative;
+}
+aside li::before {
+  content: "✔";
+  color: hsl(140, 60%, 35%);
+  position: absolute; left: 0; top: 6px;
+  font-weight: bold;
+}
+/* alternamos fondo con selector avanzado */
+aside li:nth-child(odd) {
+  background-color: hsla(210, 40%, 96%, .7);
+  border-radius: 8px;
+}
+
+/* ------------------ SECCIONES Y TITULARES ------------------ */
+section h2 {
+  color: hsl(230, 60%, 22%);
+  margin: 4px 0 14px;
+  position: relative;
+  display: inline-block;
+}
+section h2::after {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 56%;
+  margin-top: 6px;
+  background: linear-gradient(90deg, hsl(197, 71%, 53%), hsl(230, 70%, 30%));
+  border-radius: 4px;
+}
+
+/* ------------------ DESTINOS COMO TARJETAS ------------------ */
+/* Creamos un grid solo con los hijos article SIN tocar el h2 */
+#destinos {
+  display: grid;
+  grid-template-columns: 1fr;        /* por defecto una columna */
+  gap: 16px;
+}
+#destinos > h2 { grid-column: 1 / -1; }  /* el título ocupa todo el ancho */
+@media (min-width: 720px) {
+  #destinos { grid-template-columns: repeat(3, 1fr); }
+  #destinos > h2 { grid-column: 1 / 4; }
+}
+
+#destinos > article {
+  background-color: #fff;
+  border: 1px solid hsl(210, 24%, 90%);
+  border-radius: 14px;
+  padding: 14px;
+  transition: box-shadow .3s, transform .25s, border-color .25s;
+}
+#destinos > article:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px hsla(230, 30%, 20%, .08);
+  border-color: hsl(197, 71%, 70%);
+}
+/* Selector avanzado: resalta suavemente el segundo artículo */
+#destinos > article:nth-of-type(2) {
+  background-color: hsla(210, 100%, 99%, .95);
+}
+
+/* ------------------ FIGURE / IMAGEN ------------------ */
+figure { margin: 0 0 8px; }
+figure img {
+  display: block; width: 100%; height: auto;
+  border-radius: 10px;
+  transition: transform .35s, opacity .35s;
+}
+figure img:hover { transform: scale(1.02); opacity: .95; }
+figcaption {
+  text-align: center; font-size: .95rem; color: hsl(230, 15%, 35%);
+}
+
+/* ------------------ CONSEJOS ------------------ */
+#consejos ul { margin: 0; padding-left: 18px; }
+#consejos li { margin: 6px 0; }
+/* Ejemplo de selector avanzado combinando hijo directo y negación */
+#consejos ul > li:not(:last-child) { border-bottom: 1px dashed hsl(210, 30%, 90%); }
+
+/* ------------------ BOTONES (reuso ej. 3, pulido) ------------------ */
+a.boton[href^="#"] {
+  display: inline-block;
+  background-color: hsl(197, 71%, 53%);
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color .3s, transform .25s;
+}
+a.boton[href^="#"]:hover { background-color: hsl(197, 71%, 40%); transform: translateY(-2px); }
+a.boton[href^="#"]:focus {
+  outline: none;
+  animation: brillo 1s infinite alternate;
+}
+@keyframes brillo {
+  from { box-shadow: 0 0 6px hsl(39,100%,50%); }
+  to   { box-shadow: 0 0 16px hsl(39,100%,50%); }
+}
+
+/* ------------------ FOOTER ------------------ */
+footer {
+  border-top: 1px solid hsl(210, 24%, 90%);
+  background-color: #fff;
+  color: hsl(230, 25%, 28%);
+  text-align: center;
+  padding: 18px 20px 22px;
+}
+
+/* ------------------ RESPONSIVO ------------------ */
+@media (max-width: 860px) {
+  main { grid-template-columns: 1fr; }
+  aside { order: -1; } /* el aside sube en móvil */
+}
