@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>css vinculado</title>
+    <link rel="stylesheet" href="main.css">
+    <script>
+        function validarFormulario(event) {
+            event.preventDefault();
+
+            let nombre = document.getElementById("nombre").value;
+            let email = document.getElementById("email").value;
+            let telefono = document.getElementById("telefono").value;
+            let password = document.getElementById("password").value;
+
+            let regexNombre = /^[A-Za-zÁÉÍÓÚáéíóúñÑ\s]{3,50}$/;
+            let regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            let regexTelefono = /^[0-9]{9}$/;
+            let regexPassword = /^(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,}$/;
+
+            if (!regexNombre.test(nombre)) {
+                alert("El nombre solo puede contener letras y debe tener entre 3 y 50 caracteres");
+                return;
+            }
+            if (!regexEmail.test(email)) {
+                alert("El correo electrónico no es válido");
+                return;
+            }
+            if (!regexTelefono.test(telefono)) {
+                alert("El telefono debe contener exactamente 9 dígitos");
+                return;
+            }
+            if (!regexPassword.test(password)) {
+                alert("La contraseña debe tener al menos 8 caracteres, una mayúscula y un número");
+                return;
+            }
+
+            alert("Formulario enviado correctamente");
+        }
+    </script>
+</head>
+<body>
+<table>
+    <tr>
+        <td colspan="2">
+            <header>
+                <h1>Aprender más sobre el Perú</h1>
+            </header>
+        </td>
+    </tr>
+    <tr>
+        <td width="75%">
+            <main>
+                <section id="Flora">
+                    <h2>Flora</h2>
+                    <article>
+                        <h3>Somos diversos</h3>
+                        <p>Nuestra flora es extremadamente diversa, albergando una gran cantidad de especies vegetales debido a su variada geografía y climas. Se estima que el Perú cuenta con el 10% de todas las especies de plantas del mundo, con alrededor de 25,000 especies registradas, de las cuales un 30% son endémicas, es decir, solo se encuentran en este país.</p>
+                    </article>
+                    <article>
+                        <h3>Nuestra importancia</h3>
+                        <p>La flora peruana es un recurso valioso tanto para la alimentación como para la medicina, y juega un papel crucial en el equilibrio ecológico del país. La conservación de esta diversidad es fundamental para el futuro del Perú y del planeta.</p>
+                    </article>
+                </section>
+                <img src="Figura-2-Plantas-propuestas-como-flora-carismatica-de-la-Reserva-Natural-Pingueino-Rey.png" alt="Flora del Perú">
+                <section id="Fauna">
+                    <h2>Fauna</h2>
+                    <article>
+                        <h3>Somos diversos</h3>
+                        <p>Nuestra fauna al igual que nuestra flora es extremadamente diversa, albergando una gran cantidad de especies únicas y representativas de sus diferentes ecosistemas. Entre los animales más emblemáticos se encuentran el cóndor andino, la vicuña, el oso de anteojos, el delfín rosado del Amazonas, y el gallito de las rocas. Además, Perú cuenta con una gran variedad de aves, mamíferos, reptiles, peces y otros animales, muchos de los cuales son endémicos de la región.</p>
+                    </article>
+                    <article>
+                        <h3>Nuestra importancia</h3>
+                        <p>La fauna del Perú no solo es importante por su valor biológico y ecológico, sino también por su valor cultural y económico. La vicuña, por ejemplo, es un símbolo nacional y su lana es una importante fuente de ingresos. Además, muchos animales nativos forman parte de la cosmovisión y la identidad cultural de las comunidades peruanas.</p>
+                    </article>
+                </section>
+                <img src="607969710ce85.jpeg" alt="Fauna del Perú">
+            </main>
+        </td>
+        <td width="25%">
+            <aside>
+                <h3 id="contacto">Ingresa tus datos y dinos qué opinas!</h3>
+                <form onsubmit="validarFormulario(event)">
+                    <label for="nombre">Nombre:</label><br>
+                    <input type="text" id="nombre" name="nombre" required><br><br>
+
+                    <label for="email">Correo Electrónico:</label><br>
+                    <input type="email" id="email" name="email" required><br><br>
+
+                    <label for="telefono">Teléfono:</label><br>
+                    <input type="text" id="telefono" name="telefono" required><br><br>
+
+                    <label for="password">Contraseña:</label><br>
+                    <input type="password" id="password" name="password" required><br><br>
+
+                    <button type="submit">Enviar</button>
+                </form>
+                <nav>
+                    <ul>
+                        <li><a href="#Flora">Flora</a></li>
+                        <li><a href="#Fauna">Fauna</a></li>
+                        <li><a href="#Dudas">Dudas</a></li>
+                    </ul>
+                </nav>
+            </aside>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <footer>
+                <section id="Dudas">
+                    <h2>¿Tienes dudas? Contáctanos!</h2>
+                    <h3>Correo</h3>
+                    <p>florayfaunadelperu@gmail.com</p>
+                    <h3>Persona de Contacto</h3>
+                    <p>Desarrollo de aplicaciones</p>
+                    <h3>Número de contacto</h3>
+                    <p>954729608</p>
+                </section>
+            </footer>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

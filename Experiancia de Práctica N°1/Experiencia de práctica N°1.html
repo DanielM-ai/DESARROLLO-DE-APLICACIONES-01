@@ -1,0 +1,259 @@
+<!DOCTYPE html> 
+
+<html lang="es"> 
+
+<head> 
+
+    <meta charset="UTF-8"> 
+
+    <title>En linea</title> 
+
+    <script> 
+
+        function validarFormulario(event) { 
+
+            event.preventDefault(); 
+
+ 
+
+            let nombre = document.getElementById("nombre").value; 
+
+            let email = document.getElementById("email").value; 
+
+            let telefono = document.getElementById("telefono").value; 
+
+            let password = document.getElementById("password").value; 
+
+ 
+
+            let regexNombre = /^[A-Za-zÁÉÍÓÚáéíóúñÑ\s]{3,50}$/; 
+
+            let regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
+
+            let regexTelefono = /^[0-9]{9}$/; 
+
+            let regexPassword = /^(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,}$/; 
+
+ 
+
+            if (!regexNombre.test(nombre)) { 
+
+                alert("El nombre solo puede contener letras y debe tener entre 3 y 50 caracteres"); 
+
+                return; 
+
+            } 
+
+            if (!regexEmail.test(email)) { 
+
+                alert("El correo electrónico no es válido"); 
+
+                return; 
+
+            } 
+
+            if (!regexTelefono.test(telefono)) { 
+
+                alert("El telefono debe contener exactamente 9 dígitos"); 
+
+                return; 
+
+            } 
+
+            if (!regexPassword.test(password)) { 
+
+                alert("La contraseña debe tener al menos 8 caracteres, una mayúscula y un número"); 
+
+                return; 
+
+            } 
+
+ 
+
+            alert("Formulario enviado correctamente"); 
+
+        } 
+
+    </script> 
+
+</head> 
+
+<body> 
+
+ 
+
+<table border="2" width="100%" style="border-collapse: collapse; font-family: Arial, sans-serif;"> 
+
+    <tr> 
+
+        <td colspan="2" style="background-color: #e1e1e1d0; text-align: center;"> 
+
+            <header> 
+
+                <h1 style="color: #000000; font-size: 2em;">Aprender más sobre el Perú</h1> 
+
+            </header> 
+
+        </td> 
+
+    </tr> 
+
+ 
+
+    <tr> 
+
+        <td width="75%" valign="top" style="padding: 20px;"> 
+
+            <main> 
+
+                <section id="Flora" style="margin-bottom: 30px;"> 
+
+                    <h2 style="color: #000000;">Flora</h2> 
+
+                    <article> 
+
+                        <h3 style="font-size: 1.5em; color: #000000;">Somos diversos</h3> 
+
+                        <p style="line-height: 1.53;">Nuestra flora es extremadamente diversa, albergando una gran cantidad de especies vegetales debido a su variada geografía y climas. Se estima que el Perú cuenta con el 10% de todas las especies de plantas del mundo, con alrededor de 25,000 especies registradas, de las cuales un 30% son endémicas, es decir, solo se encuentran en este país.</p> 
+
+                    </article> 
+
+                    <article> 
+
+                        <h3 style="font-size: 1.5em; color: #000000;">Nuestra importancia</h3> 
+
+                        <p style="line-height: 1.5;">La flora peruana es un recurso valioso tanto para la alimentación como para la medicina, y juega un papel crucial en el equilibrio ecológico del país. La conservación de esta diversidad es fundamental para el futuro del Perú y del planeta.</p> 
+
+                    </article> 
+
+                </section> 
+
+ 
+
+                <img src="Blog-71_2.jpg" alt="Flora del Perú" style="max-width: 100%; height: auto; place-items: center;"> 
+
+ 
+
+                <section id="Fauna"> 
+
+                    <h2 style="color: #000000;">Fauna</h2> 
+
+                    <article> 
+
+                        <h3 style="font-size: 1.5em; color: #000000;">Somos diversos</h3> 
+
+                        <p style="line-height: 1.5;">Nuestra fauna, al igual que nuestra flora, es extremadamente diversa, albergando una gran cantidad de especies únicas y representativas de sus diferentes ecosistemas. Entre los animales más emblemáticos se encuentran el cóndor andino, la vicuña, el oso de anteojos, el delfín rosado del Amazonas, y el gallito de las rocas.</p> 
+
+                    </article> 
+
+                    <article> 
+
+                        <h3 style="font-size: 1.5em; color: #000000;">Nuestra importancia</h3> 
+
+                        <p style="line-height: 1.5;">La fauna del Perú no solo es importante por su valor biológico y ecológico, sino también por su valor cultural y económico. La vicuña, por ejemplo, es un símbolo nacional y su lana es una importante fuente de ingresos. Además, muchos animales nativos forman parte de la cosmovisión y la identidad cultural de las comunidades peruanas.</p> 
+
+                    </article> 
+
+                </section> 
+
+ 
+
+                <img src="fuana.jpg" alt="Fauna del Perú" style="max-width: 100%; height: auto;"> 
+
+            </main> 
+
+        </td> 
+
+ 
+
+        <td width="25%" valign="top" style="background-color: #f4f4f4; padding: 20px;"> 
+
+            <aside> 
+
+                <h3 style="color: #333; font-size: 1.5em;">Ingresa tus datos y dinos qué opinas!</h3> 
+
+                <form onsubmit="validarFormulario(event)" style="font-size: 1.0em;"> 
+
+                    <label for="nombre" style="color: #333;">Nombre:</label><br> 
+
+                    <input type="text" id="nombre" name="nombre" required style="width: 90%; padding: 8px; margin-bottom: 10px;"><br><br> 
+
+ 
+
+                    <label for="email" style="color: #333;">Correo Electrónico:</label><br> 
+
+                    <input type="email" id="email" name="email" required style="width: 90%; padding: 8px; margin-bottom: 10px;"><br><br> 
+
+ 
+
+                    <label for="telefono" style="color: #333;">Teléfono:</label><br> 
+
+                    <input type="text" id="telefono" name="telefono" required style="width: 90%; padding: 8px; margin-bottom: 10px;"><br><br> 
+
+ 
+
+                    <button type="submit" style="background-color: #6d746d; color: white; padding: 10px 225px; border-color: #6d746d; cursor: pointer;">Enviar</button> 
+
+                </form> 
+
+ 
+
+                <nav style="margin-top: 20px;"> 
+
+                    <ul style="list-style-type: none; padding: 0;"> 
+
+                        <li><a href="#Flora" style="color: #6d746d; text-decoration: none;">Flora</a></li><br> 
+
+                        <li><a href="#Fauna" style="color: #6d746d; text-decoration: none;">Fauna</a></li><br> 
+
+                        <li><a href="#Dudas" style="color: #6d746d; text-decoration: none;">Dudas</a></li><br> 
+
+                    </ul> 
+
+                </nav> 
+
+            </aside> 
+
+        </td> 
+
+    </tr> 
+
+ 
+
+    <tr> 
+
+        <td colspan="2" style="background-color: #e1e1e1d0; padding: 20px;"> 
+
+            <footer> 
+
+                <section id="Dudas"> 
+
+                    <h3 style="font-size: 1.5em; color: #333;">¿Tienes dudas? Contáctanos!</h3> 
+
+                    <h3 style="font-size: 1.2em; color: #333;">Correo:</h3> 
+
+                    <p style="font-size: 1.0em;">florayfaunadelperu@gmail.com</p> 
+
+                    <h3 style="font-size: 1.2em; color: #333;">Grupo de Contacto:</h3> 
+
+                    <p style="font-size: 1.0em;">Desarrollo de aplicaciones</p> 
+
+                    <h3 style="font-size: 1.2em; color: #333;">Número de contacto:</h3> 
+
+                    <p style="font-size: 1.0em;">954729608</p> 
+
+                </section> 
+
+            </footer> 
+
+        </td> 
+
+    </tr> 
+
+</table> 
+
+ 
+
+</body> 
+
+</html> 
