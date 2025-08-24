@@ -1,0 +1,54 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.caja {
+  margin: 10px auto;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+/* Ejemplos de medidas absolutas */
+
+/* Centímetros */
+.caja1 {
+  width: 5cm;
+  height: 2cm;
+  background-color: lightblue;
+}
+
+/* Milímetros */
+.caja2 {
+  width: 50mm;
+  height: 20mm;
+  background-color: lightgreen;
+}
+
+/* Pulgadas */
+.caja3 {
+  width: 2in;
+  height: 1in;
+  background-color: lightcoral;
+}
+
+/* Píxeles */
+.caja4 {
+  width: 200px;
+  height: 100px;
+  background-color: lightgoldenrodyellow;
+}
+
+/* Puntos */
+.caja5 {
+  width: 300pt; 
+  height: 150pt;
+  background-color: lightpink;
+}
+
+/* Picas */
+.caja6 {
+  width: 20pc; 
+  height: 10pc;
+  background-color: lightskyblue;
+}
