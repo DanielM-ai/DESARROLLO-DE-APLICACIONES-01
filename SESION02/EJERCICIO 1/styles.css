@@ -1,0 +1,68 @@
+/* Selector universal */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Selector de etiqueta */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  line-height: 1.6;
+}
+
+/* Selector de ID */
+#cabecera {
+  background: #004080;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+/* Selector de clase */
+.titulo {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+/* Selector descendente */
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  display: inline-block;
+}
+
+/* Pseudo-clases */
+nav ul li a:hover {
+  background: #0066cc;
+}
+
+nav ul li:first-child a {
+  border-left: none;
+}
+
+/* Clase aplicada a link activo */
+.activo {
+  border-bottom: 2px solid yellow;
+}
+
+/* Formularios */
+.formulario {
+  width: 80%;
+  max-width: 400px;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.formulario label {
+  margin-top: 10px;
+}
+
+/* Pseudo-clase en inputs */
+input:focus, textarea:focus {
+  border: 2px solid #0066cc;
+  outline: none;
+}
