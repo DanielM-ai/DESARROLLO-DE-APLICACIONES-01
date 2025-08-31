@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estructura de CSS Grid</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <main class="grid-container">
+    <li class="item1"></li>
+    <li class="item2"></li>
+    <li class="item3"></li>
+    <li class="item4"></li>
+    <li class="item5"></li>
+    <li class="item6"></li>
+  </main>
+
+</body>
+</html>
